@@ -62,7 +62,10 @@
     <Content Include="GetFile.aspx" />
     <Content Include="ManageUsers.aspx" />
     <Content Include="UploadAttachments.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="ViewRecord.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Default.aspx.cs">
@@ -102,6 +105,13 @@
     <Compile Include="UploadAttachments.aspx.designer.cs">
       <DependentUpon>UploadAttachments.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ViewRecord.aspx.cs">
+      <DependentUpon>ViewRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewRecord.aspx.designer.cs">
+      <DependentUpon>ViewRecord.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">
@@ -110,6 +120,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="sql\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

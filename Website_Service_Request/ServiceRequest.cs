@@ -10,6 +10,9 @@ namespace Website_Service_Request
 {
     public class ServiceRequest
     {
+        private int recNum;
+
+     
         public DateTime timeSubmitted { get; set; }
         public string reqname { get; set; }
         public string reqdivision { get; set; }
@@ -103,7 +106,7 @@ namespace Website_Service_Request
                 + "Detailed Description: " + this.reqdetaildescription + "<br /><br />"
                 + "Status: " + this.reqStatus + "<br /><br />"
                 + "ID: " + this.id+ "  " + "SRUID: " + this.sruid + " <br /><br />"
-                + "<a href='" + host + "ViewRequest.aspx?RecID=" + this.id + "'>View Request</a>";
+                + "<a href='" + host + "ViewRecord.aspx?RecID=" + this.id + "'>View Request</a>";
             return output;
         }
     }

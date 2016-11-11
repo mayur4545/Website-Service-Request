@@ -42,7 +42,7 @@ namespace Website_Service_Request
             bool valid = false;
 
             string username;
-            username = ConfigurationManager.AppSettings["UserAD"].ToString();
+            username = ConfigurationManager.AppSettings["UserAD"].ToString().ToUpper();
             if(username == "")
                 username = Request.ServerVariables["LOGON_USER"].ToString().ToUpper();
             username = username.Replace("AD\\", "");

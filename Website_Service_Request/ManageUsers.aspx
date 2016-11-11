@@ -14,7 +14,7 @@
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource1" AllowSorting="True" AllowPaging="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
             <AlternatingRowStyle BackColor="White"></AlternatingRowStyle>
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True"></asp:CommandField>
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True"></asp:CommandField>
                 <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" InsertVisible="False" SortExpression="ID"></asp:BoundField>
                 <asp:BoundField DataField="adname" HeaderText="adname" SortExpression="adname"></asp:BoundField>
                 <asp:BoundField DataField="reqname" HeaderText="reqname" SortExpression="reqname"></asp:BoundField>
@@ -80,6 +80,20 @@
                 <asp:Parameter Name="original_reqrole" Type="String"></asp:Parameter>
             </UpdateParameters>
         </asp:SqlDataSource>
+        <hr />
+        <h3>Add Users</h3>
+        
+        Name:<br /><asp:TextBox ID="nameTxtbox" runat="server"></asp:TextBox><br /><br />
+        AD Name:<br /><asp:TextBox ID="adNameTxtbox" runat="server"></asp:TextBox><br /><br />
+        Divsion:<br /><asp:TextBox ID="divisionTxtbox" runat="server"></asp:TextBox><br /><br />
+        Phone:<br /><asp:TextBox ID="phoneTxtbox" runat="server"></asp:TextBox><br /><br />
+        Branch:<br /><asp:TextBox ID="branchTxtbox" runat="server"></asp:TextBox><br /><br />
+        Email:<br /><asp:TextBox ID="emailTxtbox" runat="server"></asp:TextBox><br /><br />
+        Role: <asp:DropDownList ID="roleDDL" runat="server">
+            <asp:ListItem Value="Requester">Requester</asp:ListItem>
+            <asp:ListItem Value="Approver">Approver</asp:ListItem>
+        </asp:DropDownList><br /><br />
+        <asp:Button ID="addBtn" runat="server" Text="Add User" OnClick="addBtn_Click" />
     </div>
     </form>
 </body>
